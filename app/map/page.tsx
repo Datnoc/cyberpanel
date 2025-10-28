@@ -1,4 +1,5 @@
 'use client'
+if (typeof window === 'undefined') export default function Dummy(){return null}
 import dynamic from 'next/dynamic'
 import Sidebar from '@/components/Sidebar'
 import Topbar from '@/components/Topbar'
@@ -6,7 +7,7 @@ import AuthSync from '@/components/auth/AuthSync'
 import { db } from '@/lib/firebase'
 import { collection, onSnapshot, query, orderBy, limit } from 'firebase/firestore'
 import { useEffect, useMemo, useRef, useState } from 'react'
-const Globe = dynamic(() => import('react-globe.gl'), { ssr: false })
+const Globe = dynamic(() => import('globe.gl'), { ssr: false })
 
 export default function AttackMap(){
   const [flows, setFlows] = useState<any[]>([])
