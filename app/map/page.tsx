@@ -1,5 +1,9 @@
 'use client'
-if (typeof window === 'undefined') export default function Dummy(){return null}
+if (typeof window === 'undefined') {
+  const Dummy = () => null
+  export default Dummy
+}
+
 import dynamic from 'next/dynamic'
 import Sidebar from '@/components/Sidebar'
 import Topbar from '@/components/Topbar'
