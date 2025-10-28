@@ -1,10 +1,68 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-:root { --neon: #00ffa8; }
-body { background: #0b0f12; color: #cfe9df; }
-.neon-card { @apply rounded-xl border border-[rgba(0,255,168,0.25)] bg-panel/60 backdrop-blur-md shadow-neon; }
-.btn-neon { @apply px-4 py-2 rounded-md bg-[var(--neon)] text-black font-semibold hover:opacity-90 transition; }
-.link-soft { @apply underline text-[var(--neon)]/90 hover:text-[var(--neon)]; }
-.sidebar-item-active { box-shadow: 0 0 18px rgba(0,255,168,0.35), inset 0 0 0 1px rgba(0,255,168,0.4); }
-textarea, input { @apply bg-black/30 border border-white/10 rounded-md px-3 py-2 outline-none focus:border-[var(--neon)]; }
+
+:root {
+  --neon: #00ffa8;
+}
+
+body {
+  background: #0b0f12;
+  color: #cfe9df;
+}
+
+/* Kart efekti */
+.neon-card {
+  @apply rounded-xl border border-[rgba(0,255,168,0.25)] bg-panel/60 backdrop-blur-md shadow-neon;
+}
+
+/* Neon buton */
+.btn-neon {
+  @apply px-4 py-2 rounded-md bg-[var(--neon)] text-black font-semibold hover:opacity-90 transition;
+}
+
+/* 🔥 Neon bağlantı efekti */
+.link-soft {
+  position: relative;
+  text-decoration: none;
+  color: rgba(0, 255, 168, 0.9);
+  transition: all 0.25s ease;
+}
+
+/* Neon parlaması (glow) */
+.link-soft::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 1px;
+  background: var(--neon);
+  box-shadow: 0 0 8px var(--neon), 0 0 12px var(--neon);
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: scaleX(0.6);
+}
+
+/* Hover efekti: renk + parıltı */
+.link-soft:hover {
+  color: var(--neon);
+  text-shadow: 0 0 6px var(--neon), 0 0 12px var(--neon);
+}
+
+.link-soft:hover::after {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+/* Sidebar aktif öğe */
+.sidebar-item-active {
+  box-shadow: 0 0 18px rgba(0, 255, 168, 0.35),
+    inset 0 0 0 1px rgba(0, 255, 168, 0.4);
+}
+
+/* Form alanları */
+textarea,
+input {
+  @apply bg-black/30 border border-white/10 rounded-md px-3 py-2 outline-none focus:border-[var(--neon)];
+}
