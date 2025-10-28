@@ -1,5 +1,5 @@
 {
-  "name": "datnoc-v5-web",
+  "name": "datnoc-v6-plus",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -9,15 +9,15 @@
   "dependencies": {
     "@auth0/nextjs-auth0": "3.5.0",
     "firebase": "10.14.0",
-    "firebase-admin": "12.5.0",
     "lucide-react": "0.456.0",
     "next": "14.2.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "framer-motion": "11.3.31",
     "recharts": "2.12.7",
+    "react-globe.gl": "2.28.0",
     "three": "0.152.2",
-    "react-globe.gl": "2.28.0"
+    "pdf-lib": "1.17.1"
   },
   "devDependencies": {
     "@types/node": "20.11.0",

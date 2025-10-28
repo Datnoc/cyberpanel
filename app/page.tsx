@@ -1,27 +1,27 @@
+'use client'
 import Sidebar from '@/components/Sidebar'
 import Topbar from '@/components/Topbar'
-import AuthSync from '@/components/auth/AuthSync'
 import Link from 'next/link'
-export default function Page(){
+export default function Dashboard(){
   return (
-    <div>
-      <Sidebar/><Topbar/><AuthSync/>
-      <main className="ml-64 px-8 pb-20 grid gap-6 md:grid-cols-2">
-        <div className="glass neon-border rounded-xl p-6">
-          <h2 className="text-xl font-semibold neon-text mb-3">Başlangıç</h2>
-          <p className="text-textMuted">Auth0 ile giriş yap. Dashboard üzerinden modüllere erişebilirsin.</p>
-          <div className="mt-4 flex gap-3">
-            <Link href="/advisor" className="btn-neon">AI Advisor</Link>
-            <Link href="/network" className="link-soft">Network</Link>
-            <Link href="/map" className="link-soft">3D Map</Link>
+    <div className="flex">
+      <Sidebar/>
+      <div className="flex-1">
+        <Topbar/>
+        <div className="p-6 grid md:grid-cols-2 gap-6">
+          <div className="neon-card p-5">
+            <div className="text-xl font-semibold mb-2">Başlangıç</div>
+            <p className="opacity-80 mb-4">Auth0 ile giriş yap. Dashboard üzerinden modüllere erişebilirsin.</p>
+            <div className="flex gap-3">
+              <Link className="btn-neon" href="/advisor">AI Advisor</Link>
+              <Link className="btn-neon" href="/alerts">Alerts</Link>
+              <Link className="btn-neon" href="/network">Network</Link>
+              <Link className="btn-neon" href="/map">3D Map</Link>
+              <Link className="btn-neon" href="/reports">Reports</Link>
+            </div>
           </div>
         </div>
-        <div className="glass neon-border rounded-xl p-6">
-          <h2 className="text-xl font-semibold neon-text mb-3">Raporlar</h2>
-          <p className="text-textMuted">PDF/CSV rapor oluştur ve indir (Functions).</p>
-          <Link href="/reports" className="mt-4 inline-block link-soft">Rapor sayfasına git</Link>
-        </div>
-      </main>
+      </div>
     </div>
   )
 }

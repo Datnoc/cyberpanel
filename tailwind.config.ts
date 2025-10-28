@@ -1,11 +1,12 @@
 import type { Config } from 'tailwindcss'
-export default {
-  content: ['./app/**/*.{ts,tsx}', './components/**/*.{ts,tsx}', './pages/**/*.{ts,tsx}'],
+const config: Config = {
+  content: ["./app/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}"],
   theme: {
     extend: {
-      colors: { bg:'#07090c', neon:'#00ffa8', textMuted:'#8ba1a9' },
-      boxShadow: { neon: '0 0 16px rgba(0,255,168,0.25)' }
+      colors: { neon: "#00ffa8", bg: "#0b0f12", panel: "#0f1418" },
+      boxShadow: { neon: "0 0 30px rgba(0,255,168,0.25)" }
     }
   },
-  plugins: []
-} satisfies Config
+  plugins: [],
+}
+export default config
