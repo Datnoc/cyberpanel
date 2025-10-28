@@ -15,7 +15,7 @@
     "react-dom": "18.2.0",
     "framer-motion": "11.3.31",
     "recharts": "2.12.7",
-    "react-globe.gl": "2.6.4",
+    "react-globe.gl": "latest",
     "three": "0.161.0"
   },
   "devDependencies": {
