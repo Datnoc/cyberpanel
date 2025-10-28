@@ -17,7 +17,7 @@
     "framer-motion": "11.3.31",
     "recharts": "2.12.7",
     "three": "0.155.0",
-    "globe.gl": "https://github.com/vasturiano/globe.gl.git#c3ac4e6a9e2c45dfbccf13b183501b6e7a777f31"
+    "globe.gl": "2.24.10"
   },
   "devDependencies": {
     "@types/node": "20.11.0",
