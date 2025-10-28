@@ -1,36 +1,4 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-:root { color-scheme: dark; }
-html, body { height: 100%; }
-body {
-  @apply bg-bg text-white;
-  background-image:
-    radial-gradient(60rem 30rem at 10% -10%, rgba(0,255,168,0.08), transparent 40%),
-    radial-gradient(40rem 20rem at 90% 10%, rgba(0,180,255,0.06), transparent 45%),
-    radial-gradient(30rem 20rem at 50% 100%, rgba(0,255,168,0.06), transparent 50%);
-  background-attachment: fixed;
-}
-
-.neon-border {
-  border: 1px solid rgba(0,255,168,0.22);
-  box-shadow: 0 0 20px rgba(0,255,168,0.12) inset, 0 0 20px rgba(0,255,168,0.12);
-}
-
-.glass {
-  background: var(--glass, rgba(13,20,26,0.45));
-  backdrop-filter: blur(10px) saturate(120%);
-  -webkit-backdrop-filter: blur(10px) saturate(120%);
-}
-
-.neon-text { text-shadow: 0 0 10px rgba(0,255,168,0.55); }
-
-.code-grid {
-  background:
-    linear-gradient(transparent 95%, rgba(0,255,168,0.08) 100%),
-    linear-gradient(90deg, transparent 95%, rgba(0,255,168,0.08) 100%);
-  background-size: 24px 24px, 24px 24px;
-  mask-image: radial-gradient(circle at 50% 50%, black 60%, transparent 100%);
-  opacity: .35;
-}
+body{@apply bg-bg text-white;} .glass{background:rgba(13,20,26,.45);backdrop-filter:blur(12px)} .neon-border{border:1px solid rgba(0,255,168,.22)} .neon-text{text-shadow:0 0 12px rgba(0,255,168,.7)} .tooltip { background: rgba(0,0,0,.7); padding:6px 8px; border-radius:6px; }

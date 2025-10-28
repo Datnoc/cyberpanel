@@ -1,5 +1,5 @@
 {
-  "name": "datnoc-neon-panel",
+  "name": "datnoc-v5-web",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -9,15 +9,10 @@
   "dependencies": {
     "next": "14.2.5",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
-  },
-  "devDependencies": {
-    "autoprefixer": "10.4.19",
-    "postcss": "8.4.38",
-    "tailwindcss": "3.4.10",
-    "typescript": "5.5.4",
-    "@types/node": "20.11.0",
-    "@types/react": "18.2.70",
-    "@types/react-dom": "18.2.23"
+    "react-dom": "18.2.0",
+    "firebase": "10.14.0",
+    "lucide-react": "0.456.0",
+    "react-globe.gl": "2.6.5",
+    "three": "0.161.0"
   }
 }
