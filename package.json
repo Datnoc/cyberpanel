@@ -16,8 +16,9 @@
     "react-dom": "18.2.0",
     "framer-motion": "11.3.31",
     "recharts": "2.12.7",
-    "react-globe.gl": "github:vasturiano/react-globe.gl",
-    "three": "0.164.0"
+    "globe.gl": "2.30.1",
+    "three-globe": "2.30.1",
+    "three": "0.155.0"
   },
   "devDependencies": {
     "@types/node": "20.11.0",
