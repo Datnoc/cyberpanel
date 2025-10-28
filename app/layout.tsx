@@ -1,8 +1,6 @@
-'use client'
-
 import './globals.css'
 import type { Metadata } from 'next'
-import { UserProvider } from '@auth0/nextjs-auth0/client'
+import Providers from './providers'
 
 export const metadata: Metadata = {
   title: 'DatNoc Cyber Intelligence v5',
@@ -13,9 +11,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="tr">
       <body className="min-h-screen">
-        <UserProvider>
+        <Providers>
           {children}
-        </UserProvider>
+        </Providers>
       </body>
     </html>
   )
